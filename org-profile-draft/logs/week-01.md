@@ -1,0 +1,38 @@
+# 1주차 · 스크리닝·매칭 에이전트 착수
+
+2026-10-08(목) 19:30–21:30 · [디스코드 서버](https://discord.gg/WF8cTKNUy) · 패턴 **Reflection**
+
+[← 랩 메인](https://github.com/agent-architecture-lab) · [이전: OT](week-00.md) · [다음: 2주차](week-02.md)
+
+<!--
+  세션 전: 「계획」의 빈칸을 채워요. 세션 후: 「기록」과 「누적 지표」를 채워요.
+  공개 페이지예요 — 실명·연락처·API 키·실제 지원서나 디스코드 대화 원문은 쓰지 않아요. GitHub ID는 써도 돼요.
+-->
+
+## 계획
+
+- **예습** — 필수 `01_reflection` · 심화 `18_reflexion` · `20_chain_of_verification` ([교재 `notebooks/`](https://github.com/FareedKhan-dev/all-agentic-architectures/tree/HEAD/notebooks))
+- **이번 주 목표** —
+- **담당** —
+
+## 기록
+
+_세션 후 작성해요._
+
+- **참석** —
+- **한 일** — (PR·이슈 링크)
+- **데모·결과** —
+- **막힌 점 → 해결** —
+- **결정한 것** —
+
+## 누적 지표
+
+| 지표 | 누적 | 팀 목표 |
+| --- | --- | --- |
+| 아키텍처 구현 | | 18개 |
+| 커밋 | | 150개 이상 |
+| End-to-End 성공률 | | 80% 이상 |
+
+## 다음 세션까지
+
+- [ ] (할 일 · 담당 GitHub ID)
