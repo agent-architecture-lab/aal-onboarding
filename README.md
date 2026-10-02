@@ -1,6 +1,6 @@
 # 에이전트 아키텍처 랩 3-Day 온보딩 — Codex·GitHub 실습환경 세팅
 
-2026-10-02 · v0.1 (10/3 팀 오리엔테이션에서 함께 검증 후 v0.2로 갱신) · 문의: 리더 Pio (디스코드)
+2026-10-02 · v0.1 (10/3 팀 오리엔테이션에서 함께 검증 후 v0.2로 갱신) · 문의: 리더 Pio ([디스코드 서버](https://discord.gg/WF8cTKNUy))
 
 크루원은 1주차(10/8) 전까지 **Codex CLI · GitHub · 교재 실습 환경**을 세팅하고, Codex로 교재 노트북을 읽고 실행하고, 첫 PR을 올릴 수 있게 됩니다. 이 문서는 잇츠(IT's) 스터디 5기 「에이전트 아키텍처 랩」 크루원용 온보딩 가이드예요.
 
@@ -8,11 +8,11 @@
 
 - GitHub 계정 (개인 계정이면 돼요)
 - ChatGPT 계정 — Plus 이상 플랜이면 Codex에 바로 로그인돼요. 플랜이 없으면 OpenAI API 키로도 쓸 수 있어요(크레딧은 리더 공지)
-- 디스코드 (정규 세션 100% 온라인)
+- 디스코드 — [디스코드 서버](https://discord.gg/WF8cTKNUy)에 먼저 들어와 주세요 (정규 세션 100% 온라인)
 - macOS 12+ 또는 Windows 11 + **WSL2(Ubuntu)** — Codex 공식 지원 범위예요. Linux도 돼요
 - 터미널이 처음이면 → [터미널이 낯선 크루 트랙](#터미널이-낯선-크루-트랙--화이트글러브-15분)
 
-**OT 전에 리더에게 디스코드 DM으로 한 번에 보낼 것** (초대·발급에 시간이 걸려요)
+**OT 전에 [디스코드 서버](https://discord.gg/WF8cTKNUy)에 들어와서 리더에게 DM으로 한 번에 보낼 것** (초대·발급에 시간이 걸려요)
 
 1. **GitHub ID** — `agent-architecture-lab` 조직 초대용. 없으면 비공개 레포 접근과 브랜치 push가 막혀요
 2. **LLM 사용 경로** — ChatGPT 유료 플랜 유무 / API 키 필요 여부 (크레딧 안내 기준)
@@ -26,7 +26,7 @@ Day 1은 도구, Day 2는 연결(10/3 OT 현장), Day 3은 Codex로 실제로 �
 
 | Day | 할 일 | 끝났다는 기준 |
 | --- | --- | --- |
-| **Day 1** 계정·도구 (~10/3 OT 전) | GitHub 가입·ID 전송 → (Windows) WSL2 → git·gh·uv·codex 설치 → PATH 점검 → git 작성자 설정 | 새 터미널에서 `which git gh uv codex` 가 4줄 모두 경로를 출력 |
+| **Day 1** 계정·도구 (~10/3 OT 전) | 디스코드 참여 → GitHub 가입·ID 전송 → (Windows) WSL2 → git·gh·uv·codex 설치 → PATH 점검 → git 작성자 설정 | 새 터미널에서 `which git gh uv codex` 가 4줄 모두 경로를 출력 |
 | **Day 2** 연결 (10/3 팀 OT) | 조직 초대 수락 → `gh auth login` → Codex 로그인·권한 설정 → 교재 clone·`uv` 환경·`.env` → Context7 MCP → 점검 스크립트 | `aal-doctor.sh` 필수 항목 모두 ✔, `codex doctor` 에 ✗ 없음 |
 | **Day 3** 활용 (10/4~10/7) | 예시 프롬프트로 시험 → 자기소개 PR → 체크리스트 이슈 close | 아래 [검증 체크리스트](#검증-체크리스트) 전 항목 통과 |
 
@@ -34,7 +34,7 @@ Day 1은 도구, Day 2는 연결(10/3 OT 현장), Day 3은 Codex로 실제로 �
 
 터미널이 `git`·`gh`·`uv`·`codex` 를 찾을 수 있는 상태까지 만드는 날이에요.
 
-1. [github.com](https://github.com) 가입(이미 있으면 생략) → 2단계 인증(2FA) 켜기 → 리더에게 GitHub ID 보내기
+1. [디스코드 서버](https://discord.gg/WF8cTKNUy) 참여 → [github.com](https://github.com) 가입(이미 있으면 생략) → 2단계 인증(2FA) 켜기 → 리더에게 GitHub ID 보내기
 2. **(Windows만) WSL2 설치** — PowerShell을 *관리자 권한*으로 열고 `wsl --install` → 재부팅 → Ubuntu 사용자 이름·비밀번호 만들기. **이후 모든 명령은 Ubuntu 터미널에서** 실행하고, 작업 폴더는 `~/`(리눅스 홈) 아래에 둬요. `/mnt/c/...` 에서 작업하면 느리고 권한 문제가 생겨요.
 3. 터미널에서 기본 도구 설치
 
@@ -225,7 +225,7 @@ codex doctor
 
 ### 일정
 
-정규 모임은 **매주 목요일 19:30–21:30, 디스코드**(100% 온라인)예요.
+정규 모임은 **매주 목요일 19:30–21:30, [디스코드 서버](https://discord.gg/WF8cTKNUy)**(100% 온라인)예요.
 
 | 구분 | 날짜 | 모듈 | 패턴 |
 | --- | --- | --- | --- |
@@ -286,7 +286,7 @@ codex doctor
 
 터미널이 낯선 분은 OT에서 리더와 함께 진행해요. 본인이 누르는 건 \[로그인\]·\[연결\]·\[Commit\]뿐이에요.
 
-1. GitHub 가입 → 리더에게 ID 전송 → 조직 초대 수락 (전부 브라우저)
+1. [디스코드 서버](https://discord.gg/WF8cTKNUy) 참여 → GitHub 가입 → 리더에게 ID 전송 → 조직 초대 수락 (전부 브라우저)
 2. **자기소개 PR을 브라우저로** — 이 레포의 `crew/` 폴더 → \[Add file\] → \[Create new file\] → `crew/<GitHub ID>.md` 에 [템플릿](crew/_template.md) 내용 붙여넣고 채우기 → \[Commit changes\] → "Create a new branch… and start a pull request" 선택
 3. 교재 노트북은 GitHub에서 바로 열어 읽어요 — 실행 결과가 이미 들어 있어요
 4. ChatGPT 유료 플랜이 있으면 [Codex 웹](https://chatgpt.com/codex)에 GitHub을 연결해 브라우저에서 Codex를 써 볼 수 있어요

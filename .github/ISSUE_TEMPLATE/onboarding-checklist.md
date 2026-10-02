@@ -12,7 +12,7 @@ assignees: ''
 **트랙**: 공통 / 터미널이 낯선 크루 / 개발자·데이터
 
 ## Day 1 — 계정·도구
-- [ ] 리더에게 GitHub ID · LLM 사용 경로 · OS 전송
+- [ ] [디스코드 서버](https://discord.gg/WF8cTKNUy) 참여 + 리더에게 GitHub ID · LLM 사용 경로 · OS 전송
 - [ ] (Windows) WSL2 Ubuntu 설치
 - [ ] 새 터미널에서 `which git gh uv codex` 4줄 모두 경로 출력
 - [ ] `git config --global user.name / user.email` 설정 (noreply 메일 권장)
