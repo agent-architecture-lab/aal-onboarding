@@ -34,6 +34,7 @@ assignees: ''
 ## aal-doctor 결과
 
 `bash ~/aal/aal-onboarding/scripts/aal-doctor.sh ~/aal/all-agentic-architectures` 출력을 붙여 주세요.
+✘ 가 있으면 먼저 디스코드에서 `/doctor` 에 같은 출력을 붙여 해결책을 확인해요(본인에게만 보여요).
 
 ```
 (여기에 붙여넣기)
