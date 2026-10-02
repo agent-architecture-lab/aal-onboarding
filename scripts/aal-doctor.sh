@@ -154,6 +154,6 @@ echo "== 결과: 필수 실패 $FAILS · 권장 $WARNS"
 if [ "$FAILS" -eq 0 ]; then
   echo "필수 항목 통과. 이 출력을 온보딩 체크리스트 이슈에 붙여 주세요."
 else
-  echo "✘ 항목을 README 「자주 막히는 점」에서 찾아보고, 안 되면 이 출력을 디스코드에 올려 주세요."
+  echo "✘ 항목을 README 「자주 막히는 점」에서 찾거나, 디스코드에서 /doctor 에 이 출력을 붙여 보세요."   # aal-bot 은 "항목을 README" 로 시작하는 이 줄을 결과에서 빼요
 fi
 [ "$FAILS" -eq 0 ]

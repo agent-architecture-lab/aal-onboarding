@@ -1,6 +1,6 @@
 # 에이전트 아키텍처 랩 3-Day 온보딩 — Codex·GitHub 실습환경 세팅
 
-2026-10-02 · v0.1 (10/3 팀 오리엔테이션에서 함께 검증 후 v0.2로 갱신) · 문의: 리더 Pio ([디스코드 서버](https://discord.gg/WF8cTKNUy))
+2026-10-02 · v0.2 초안 (디스코드 봇 `/doctor` 안내 추가 · 10/3 팀 오리엔테이션 검증 결과는 OT 후 반영) · 문의: 리더 Pio ([디스코드 서버](https://discord.gg/WF8cTKNUy))
 
 크루원은 1주차(10/8) 전까지 **Codex CLI · GitHub · 교재 실습 환경**을 세팅하고, Codex로 교재 노트북을 읽고 실행하고, 첫 PR을 올릴 수 있게 됩니다. 이 문서는 잇츠(IT's) 스터디 5기 「에이전트 아키텍처 랩」 크루원용 온보딩 가이드예요.
 
@@ -27,7 +27,7 @@ Day 1은 도구, Day 2는 연결(10/3 OT 현장), Day 3은 Codex로 실제로 �
 | Day | 할 일 | 끝났다는 기준 |
 | --- | --- | --- |
 | **Day 1** 계정·도구 (~10/3 OT 전) | 디스코드 참여 → GitHub 가입·ID 전송 → (Windows) WSL2 → git·gh·uv·codex 설치 → PATH 점검 → git 작성자 설정 | 새 터미널에서 `which git gh uv codex` 가 4줄 모두 경로를 출력 |
-| **Day 2** 연결 (10/3 팀 OT) | 조직 초대 수락 → `gh auth login` → Codex 로그인·권한 설정 → 교재 clone·`uv` 환경·`.env` → Context7 MCP → 점검 스크립트 | `aal-doctor.sh` 필수 항목 모두 ✔, `codex doctor` 에 ✗ 없음 |
+| **Day 2** 연결 (10/3 팀 OT) | 조직 초대 수락 → `gh auth login` → Codex 로그인·권한 설정 → 교재 clone·`uv` 환경·`.env` → Context7 MCP → 점검 스크립트 (✘ 가 있으면 디스코드 `/doctor`) | `aal-doctor.sh` 필수 항목 모두 ✔, `codex doctor` 에 ✗ 없음 |
 | **Day 3** 활용 (10/4~10/7) | 예시 프롬프트로 시험 → 자기소개 PR → 체크리스트 이슈 close | 아래 [검증 체크리스트](#검증-체크리스트) 전 항목 통과 |
 
 ## Day 1 — 계정·도구
@@ -190,6 +190,13 @@ codex doctor
 
 `aal-doctor.sh` 는 **읽기만** 해요(설치·수정 없음, 키 값은 출력하지 않고 있는지만 봐요). 필수 항목이 모두 ✔ 면 결과를 Day 3 체크리스트 이슈에 붙여 주세요. `codex doctor` 는 ✗ 가 없으면 돼요(⚠ 는 괜찮아요).
 
+**✘ 가 있으면 디스코드에서 `/doctor`** — [디스코드 서버](https://discord.gg/WF8cTKNUy)의 아무 채널에서 `/doctor` 를 입력하면 입력창이 떠요. `aal-doctor.sh` 출력 **전체**를 붙여 넣으면 ✘·– 항목마다 해결책을 짝지어 알려줘요.
+
+- 답변은 **본인에게만** 보여요. 채널에 출력을 그대로 올릴 필요가 없어요.
+- 출력에는 키 값이 없어요. 실수로 API 키·토큰을 함께 붙이면 봇이 알아채고 폐기를 안내해요 — 그 키는 바로 폐기(revoke)해 주세요.
+- 고친 뒤 `aal-doctor.sh` 를 다시 돌려 모두 ✔ 인지 확인해요.
+- 봇이 응답하지 않으면 아래 [자주 막히는 점](#자주-막히는-점) 표에 같은 해결책이 있어요. 그래도 안 되면 봇을 멘션해 질문 스레드를 열어요.
+
 ## Day 3 — 활용
 
 아래 프롬프트를 그대로 말해 보고, 체크리스트를 모두 통과하면 온보딩 완료예요.
@@ -248,7 +255,19 @@ codex doctor
 
 - 모든 과제·진행 상황은 **GitHub Issues + Projects 보드**로 관리해요. Notion은 쓰지 않아요.
 - 변경은 항상 **브랜치 → PR → 리뷰 → 머지**. `main` 에 직접 push하지 않아요.
-- 질문·막힘은 디스코드 랩 채널에 남기고, 재현 가능한 문제는 이 레포에 이슈로 올려요. 이 가이드의 오류를 발견하면 바로 PR 주세요.
+- 질문·막힘은 디스코드에서 **봇을 멘션해 질문 스레드**로 남기고, 재현 가능한 문제는 이 레포에 이슈로 올려요. 이 가이드의 오류를 발견하면 바로 PR 주세요.
+
+### 랩 디스코드 봇
+
+| 명령 | 하는 일 | 보이는 범위 |
+| --- | --- | --- |
+| `/doctor` | `aal-doctor.sh` 출력을 붙이면 ✘·– 항목마다 해결책을 짝지어요 | 본인만 |
+| `/onboarding` | 크루별 [온보딩 체크리스트 이슈](https://github.com/agent-architecture-lab/aal-onboarding/issues) 진척 | 채널 |
+| `/schedule` | 다음 정규 모임·모듈·예습 노트북 | 채널 |
+| `@봇 질문 내용` | 그 메시지로 질문 스레드를 열어요 | 채널 |
+| `/help` | 명령어 안내 | 본인만 |
+
+정규 모임 날 18:30에는 공지 채널에 리마인더가 올라와요. 봇은 LLM 없이 규칙으로만 답하고(1주차 기준), 지정 채널과 자기가 연 스레드에만 글을 써요. GitHub은 읽기만 해요. 3주차부터는 크루가 만든 에이전트가 이 봇에 하나씩 붙어요.
 
 ### 주차별 예습 자료 (v0.1 제안)
 
@@ -290,7 +309,7 @@ codex doctor
 2. **자기소개 PR을 브라우저로** — 이 레포의 `crew/` 폴더 → \[Add file\] → \[Create new file\] → `crew/<GitHub ID>.md` 에 [템플릿](crew/_template.md) 내용 붙여넣고 채우기 → \[Commit changes\] → "Create a new branch… and start a pull request" 선택
 3. 교재 노트북은 GitHub에서 바로 열어 읽어요 — 실행 결과가 이미 들어 있어요
 4. ChatGPT 유료 플랜이 있으면 [Codex 웹](https://chatgpt.com/codex)에 GitHub을 연결해 브라우저에서 Codex를 써 볼 수 있어요
-5. 로컬 설치(Day 1~2)는 OT 이후 리더와 화면 공유로 페어 진행 — 막힌 화면은 캡처해서 디스코드에 올려 주세요
+5. 로컬 설치(Day 1~2)는 OT 이후 리더와 화면 공유로 페어 진행 — 막히면 디스코드에서 봇을 멘션해 질문 스레드를 열고, 막힌 화면 캡처를 거기에 올려 주세요
 
 ## 개발자·데이터 트랙
 
@@ -319,7 +338,7 @@ jupyter lab             # 노트북
 
 ## 자주 막히는 점
 
-> v0.1은 예상 목록이에요. 10/3 OT에서 실제로 겪은 증상으로 교체·보강해요. 그래도 안 되면 `aal-doctor.sh` 결과를 붙여 디스코드에 물어봐 주세요.
+> 아직 예상 목록이에요. 10/3 OT에서 실제로 겪은 증상으로 교체·보강해요. 디스코드 `/doctor` 에 `aal-doctor.sh` 결과를 붙이면 이 표의 해결책을 항목별로 짝지어 줘요. 그래도 안 되면 봇을 멘션해 질문 스레드를 열어 주세요.
 
 | 증상 | 원인 | 해결 |
 | --- | --- | --- |
@@ -349,6 +368,8 @@ bash ~/aal/aal-onboarding/scripts/aal-doctor.sh ~/aal/all-agentic-architectures 
 
 점검 항목: CLI 4종(git·gh·uv·codex) 경로, git 작성자, `gh` 로그인과 `agent-architecture-lab` 조직 접근, Codex 로그인·권한 기본값, (경로를 주면) 교재 `.venv`·패키지 import·`.env` 필수 키·`.env` 의 git 제외 여부.
 
+결과에 ✘ 가 있으면 디스코드 `/doctor` 에 출력 전체를 붙여 해결책을 받아요(본인에게만 보여요).
+
 ### B. Codex 설정 예시 (`~/.codex/config.toml`)
 
 ```toml
@@ -369,4 +390,5 @@ url = "https://mcp.context7.com/mcp"
 
 | 날짜 | 내용 |
 | --- | --- |
+| 2026-10-02 | v0.2 초안 — 디스코드 봇([aal-bot](https://github.com/agent-architecture-lab/aal-bot), 조직 멤버만 열람) 안내 추가: Day 2 점검·자주 막히는 점·화이트글러브 트랙에 `/doctor`·질문 스레드 흐름, 「랩 디스코드 봇」 명령표. 「자주 막히는 점」 실측 반영은 10/3 OT 후 |
 | 2026-10-02 | v0.1 초판 — 3-Day 온보딩 구조를 랩(Codex·GitHub·교재)에 맞게 작성. Codex CLI 0.160 기준 명령 확인, Linux(Ubuntu 24.04)에서 교재 설치·테스트(283 passed)·`aal-doctor.sh` 사전 실행. macOS·WSL2는 10/3 팀 OT 현장 검증 예정 |
